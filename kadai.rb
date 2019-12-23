@@ -8,7 +8,7 @@ p numbers.map{|number|number + number - 1}
 # ["田中", "佐藤", "佐々木", "高橋"]
 
 name = ["田中", "佐藤", "佐々木", "高橋"]
-name.push("斎藤")
+name << "斎藤"
 p name
 
 
@@ -58,10 +58,12 @@ p a2.instance_of?(Array)
 #-> [6, 5, 3, 7, 1]
 
 numbers = ["6", "5", "3", "7", "1"]
-p numbers.map {|item| item.to_i }
+arr = []
+numbers.each do |new_numbers|
+  arr << new_numbers.to_i
+end
 
-p numbers.collect {|item| item.to_i }
-
+p arr
 ## Q9. 以下の配列を用いて、期待通りの出力結果になるようにコードを書いてください
 # ["田中", "佐藤", "佐々木", "高橋"]
 
@@ -72,5 +74,5 @@ p numbers.collect {|item| item.to_i }
 # ["田中", "佐藤", "佐々木", "高橋"]
 
 names = ["田中", "佐藤", "佐々木", "高橋"]
-names.push("山下")
+names << "山下"
 p names
