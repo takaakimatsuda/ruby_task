@@ -76,30 +76,3 @@ p arr
 names = ["田中", "佐藤", "佐々木", "高橋"]
 names << "山下"
 p names
-
-## Q11 以下の配列から重複する部分だけを抽出した新しい配列を作成してください
-
-favorite_sport = ["フットサル", "バスケット"];
-selected_sport = ["野球", "ボルダリング", "サッカー", "フットサル"];
-
-p favorite_sport & selected_sport
-
-## Q12 以下の配列を用いた繰り返し処理において、「うに」が含まれていれば「好物です」と表示し、そうでなければ「まぁまぁ好きです」と表示するようにコードを書いてください
-
-  sushi_netas = ["いか", "たこ", "うに", "しゃけ", "うにぎり", "うに軍艦", "うに丼"]
-  sushi_netas.each do |neta|
-    # 3項演算子ver
-    like = neta.include?("うに") ? "#{neta}: 好物です" : "#{neta}: まぁまぁ好きです"
-    puts like
-    # 3項演算子不使用
-    # if neta.include?("うに")
-    #   puts "#{neta}: 好物です"
-    # else
-    #   puts "#{neta}: まぁまぁ好きです"
-    # end
-  end
-
-  ## Q13. 以下の配列から奇数だけを選んだ新しい配列を作成してください
-
-  number = [1, 2, 3, 4, 5]
-p number.each_slice(2).map(&:first)
