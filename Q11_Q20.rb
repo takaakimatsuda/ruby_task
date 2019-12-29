@@ -44,21 +44,21 @@ puts names.count("admin")
 
 sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
   ball = sports.flatten!.uniq
-  p "ユーザーの趣味一覧"
+  puts "ユーザーの趣味一覧"
   ball.each.with_index(1) do |sport,i|
-    p "No#{i} #{sport}"
+    puts "No#{i} #{sport}"
   end
 
   ## Q17. 以下のハッシュから name の値を取り出してください
 
 
 user = {name: "satou", age: 33}
-p user[:name]
+puts user[:name]
 
   ## Q18. 以下のハッシュから name の値を取り出して下さい
 
 {user: {name: "satou", age: 33}}
-p(user[:name])
+puts(user[:name])
 
 ## Q19. 以下の既存で存在する user_data に対して、 update_data の内容を反映させ user_data の内容を書き換えて下さい
 
