@@ -24,6 +24,8 @@ p favorite_sport & selected_sport
 
   number = [1, 2, 3, 4, 5]
 p number.each_slice(2).map(&:first)
+# selectとodd?を使った書き方
+p number.select(&:odd?)
 
 ## Q14. 以下の配列からnilの要素を削除してください
 
@@ -43,8 +45,8 @@ puts names.count("admin")
 sports = ["サッカー", "バスケ", "野球", ["フットサル", "野球"], "水泳", "ハンドボール", ["卓球", "サッカー", "ボルダリング"]]
   ball = sports.flatten!.uniq
   p "ユーザーの趣味一覧"
-  ball.each.with_index(1) do |b,i|
-    p "No#{i} #{b}"
+  ball.each.with_index(1) do |sport,i|
+    p "No#{i} #{sport}"
   end
 
   ## Q17. 以下のハッシュから name の値を取り出してください
